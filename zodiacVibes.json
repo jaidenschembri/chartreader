@@ -1,0 +1,888 @@
+[
+  {
+    "western": "Aries",
+    "chinese": "Rat",
+    "vibe": "Dynamic Trailblazer",
+    "description": "Your mind is a battlefield, and your ideas are weapons. The Rat's cunning sharpens Aries’ raw instinct, creating a strategist who acts before others even think to plan. You surge forward, carving paths through resistance, yet often burn out in your own blaze. Your flaw is your speed; your gift, unstoppable momentum."
+  },
+  {
+    "western": "Aries",
+    "chinese": "Ox",
+    "vibe": "Determined Pioneer",
+    "description": "Here stands the war drum of Aries bound in the iron yoke of the Ox. Relentless. Heavy. Sacred. You don’t sprint—you march, crushing stone under foot. But your challenge is learning softness—your world often resists flexibility, mistaking surrender for weakness."
+  },
+  {
+    "western": "Aries",
+    "chinese": "Tiger",
+    "vibe": "Fearless Warrior",
+    "description": "A double helix of primal fire. Tiger gives claws to Aries’ fists, turning reckless courage into lethal elegance. You are charisma in motion, a living omen of action. But this power comes with alienation—you devour before you listen."
+  },
+  {
+    "western": "Aries",
+    "chinese": "Cat",
+    "vibe": "Charming Phantom",
+    "description": "The Cat is not timid—it is elusive, unseen until it pounces. You blend Aries’ aggression with a magnetic subtlety, creating a paradox: the predator that stalks with grace. You charm and disarm, yet your heart is a maze even you hesitate to explore."
+  },
+  {
+    "western": "Aries",
+    "chinese": "Dragon",
+    "vibe": "Magnetic Leader",
+    "description": "Two storms converge—mythic, radiant, destructive. You walk with volcanic ambition, born to lead empires or incinerate them. People orbit you instinctively, but they rarely know the real you. You must decide if your fire builds or annihilates."
+  },
+  {
+    "western": "Aries",
+    "chinese": "Snake",
+    "vibe": "Strategic Firestarter",
+    "description": "Intuition like venom, passion like wildfire. You are not loud—but when you move, it’s surgical. Aries gives you courage; Snake teaches when to wait. Your greatest threat is your mind turning inward, weaponizing thought against spirit."
+  },
+  {
+    "western": "Aries",
+    "chinese": "Horse",
+    "vibe": "Restless Wanderer",
+    "description": "Kinetic energy incarnate. There is no tether strong enough to bind this duo. You chase freedom like it owes you something, but often forget why you ran in the first place. Purpose must be reclaimed, again and again."
+  },
+  {
+    "western": "Aries",
+    "chinese": "Goat",
+    "vibe": "Creative Trailblazer",
+    "description": "You are a strange flame—wild but gentle, forceful but artistic. Aries gives impulse; Goat offers vision. You birth new worlds from nothing, but your sensitivity makes you brittle. You must learn to endure your own intensity."
+  },
+  {
+    "western": "Aries",
+    "chinese": "Monkey",
+    "vibe": "Innovative Instigator",
+    "description": "You don’t follow rules—you crack them open to see what bleeds. Trickster and warrior in one, you create chaos to learn, to laugh, to lead. People underestimate your depth because they can’t outpace your grin. Your shadow is apathy when not sufficiently challenged."
+  },
+  {
+    "western": "Aries",
+    "chinese": "Rooster",
+    "vibe": "Confident Architect",
+    "description": "Precision carves the flame. Rooster discipline tempers Aries’ fury into sharp, surgical expression. You seek perfection in the spotlight, but your soul was not born to please—it was born to awaken. Beware the ego's hunger for applause."
+  },
+  {
+    "western": "Aries",
+    "chinese": "Dog",
+    "vibe": "Loyal Champion",
+    "description": "You are a shield and a sword. Aries’ fire tempered by Dog’s honor makes you a ferocious protector, loyal to your chosen few. But your rage flares when loyalty feels betrayed—even when it’s not. Learning trust without control is your true rite of passage."
+  },
+  {
+    "western": "Aries",
+    "chinese": "Pig",
+    "vibe": "Joyful Warlord",
+    "description": "Optimism dressed in armor. Pig softens the flame, turning your intensity toward warmth and celebration. You are radiant, a bringer of joy—but prone to self-sabotage when things feel too easy. Beneath your laughter is an ache for something deeper."
+  },
+
+
+  {
+    "western": "Taurus",
+    "chinese": "Rat",
+    "vibe": "Steady Innovator",
+    "description": "You’re a fortress with a secret tunnel. Taurus brings the patience; Rat, the scheming brilliance. You construct empires in silence, never revealing your hand too early. Your curse is comfort—staying too long in places your soul has already outgrown."
+  },
+  {
+    "western": "Taurus",
+    "chinese": "Ox",
+    "vibe": "Unstoppable Force",
+    "description": "This is the grind made holy. You are a mountain moving at its own pace, defiant in your consistency. Ox roots Taurus in unshakable will, but beware: in your refusal to bend, you may forget how to flow. Power without reflection becomes prison."
+  },
+  {
+    "western": "Taurus",
+    "chinese": "Tiger",
+    "vibe": "Powerful Protector",
+    "description": "Taurus builds the garden, Tiger guards the gate. Your love is fierce, territorial, and rare. You fight for your people—but often forget to rest. The challenge is trusting that not every battle needs your roar."
+  },
+  {
+    "western": "Taurus",
+    "chinese": "Cat",
+    "vibe": "Graceful Builder",
+    "description": "This is quiet elegance, sacred symmetry. Cat brings subtlety to Taurus’ architecture, shaping beauty that endures. You feel safest surrounded by what you’ve built, but risk isolation behind aesthetic walls. The soul starves when it forgets the messiness of life."
+  },
+  {
+    "western": "Taurus",
+    "chinese": "Dragon",
+    "vibe": "Majestic Achiever",
+    "description": "Taurus grounds the Dragon’s cosmic ambition, fusing grandeur with structure. You radiate power in slow waves, drawing others to your world. But your downfall is control—believing if you stop holding everything, it will collapse. Surrender is not defeat."
+  },
+  {
+    "western": "Taurus",
+    "chinese": "Snake",
+    "vibe": "Wise Stabilizer",
+    "description": "Still waters run deep. Taurus offers grounding; Snake brings psychic perception. You speak few words but see many truths. Your path is one of silent mastery—but beware emotional paralysis disguised as stoicism."
+  },
+  {
+    "western": "Taurus",
+    "chinese": "Horse",
+    "vibe": "Steady Adventurer",
+    "description": "Paradox lives here. Taurus craves stillness, Horse demands motion. You wander but always return home, even if only in dreams. This duality teaches you how to balance freedom and foundation—but only if you stop fearing the unknown."
+  },
+  {
+    "western": "Taurus",
+    "chinese": "Goat",
+    "vibe": "Artistic Creator",
+    "description": "Two artists, one soul. Taurus brings craft; Goat, chaos. You are here to make beauty real—but often fall into moods that consume. Learn to finish what you start and forgive what isn’t perfect. Your gift is creation, not control."
+  },
+  {
+    "western": "Taurus",
+    "chinese": "Monkey",
+    "vibe": "Resourceful Builder",
+    "description": "Taurus lays bricks, Monkey turns them into games. You’re clever beneath your stillness—solving problems others didn’t see coming. But too much planning can make life mechanical. Build less for control, more for joy."
+  },
+  {
+    "western": "Taurus",
+    "chinese": "Rooster",
+    "vibe": "Precise Perfectionist",
+    "description": "Structure worships you. Rooster brings exactness; Taurus, patience. You make things beautiful by making them right. But obsession can rot into stagnation. Release the fear that something flawed is something unworthy."
+  },
+  {
+    "western": "Taurus",
+    "chinese": "Dog",
+    "vibe": "Loyal Guardian",
+    "description": "A heart like an old cathedral—solid, silent, built to withstand. You protect your people with quiet acts, never loud declarations. Taurus anchors Dog’s devotion, but both resist change. Learn that loving something means letting it evolve."
+  },
+  {
+    "western": "Taurus",
+    "chinese": "Pig",
+    "vibe": "Comfort Creator",
+    "description": "You are abundance incarnate. Pig sweetens Taurus’ sensuality, creating a life of rich pleasures and nurturing warmth. But you risk losing yourself in softness. True comfort comes not from escape, but from presence in discomfort."
+  },
+
+
+  {
+    "western": "Gemini",
+    "chinese": "Rat",
+    "vibe": "Quick-Witted Communicator",
+    "description": "Two minds wired for disruption. Gemini spins the ideas, Rat refines the schemes. You’re a trickster prophet—talking, moving, decoding. But your curse is mental burnout; genius runs hot and often lonely."
+  },
+  {
+    "western": "Gemini",
+    "chinese": "Ox",
+    "vibe": "Versatile Worker",
+    "description": "Gemini dances, Ox anchors. You’re a chaotic mind in a stable machine, capable of holding multiple timelines at once. But your gift becomes burden when duty drowns spontaneity. Let go before the spark dims."
+  },
+  {
+    "western": "Gemini",
+    "chinese": "Tiger",
+    "vibe": "Dynamic Storyteller",
+    "description": "Gemini gives the voice, Tiger gives the roar. You speak with electricity—performing, provoking, prophesying. You can spark revolutions or burn bridges in seconds. Learning when to pause becomes your greatest wisdom."
+  },
+  {
+    "western": "Gemini",
+    "chinese": "Cat",
+    "vibe": "Charming Diplomat",
+    "description": "You disarm with a glance, kill with a joke. Cat brings poise to Gemini’s endless chatter. You shape reality with grace, but risk vanishing into mirrors. Your identity fractures when you try to please too many masks at once."
+  },
+  {
+    "western": "Gemini",
+    "chinese": "Dragon",
+    "vibe": "Inspiring Speaker",
+    "description": "When air meets flame, we get myth. Dragon gives divine weight to Gemini’s endless voice, making you a channel for visions and truth. You’re meant to inspire—but must fight the urge to perform truth instead of live it."
+  },
+  {
+    "western": "Gemini",
+    "chinese": "Snake",
+    "vibe": "Strategic Communicator",
+    "description": "You whisper with intent. Gemini spins the language, Snake sharpens it. You know exactly when to speak and when to vanish. Your gift is manipulation for good—but even serpents must remember the cost of every strike."
+  },
+  {
+    "western": "Gemini",
+    "chinese": "Horse",
+    "vibe": "Energetic Networker",
+    "description": "Thought becomes motion. Gemini flickers; Horse runs. You’re built to connect—ideas, people, places—but can’t stop moving long enough to feel any of it. Your lesson: stillness doesn’t mean stagnation."
+  },
+  {
+    "western": "Gemini",
+    "chinese": "Goat",
+    "vibe": "Creative Connector",
+    "description": "You speak in color and metaphor. Gemini’s wit finds softness in Goat’s art. You’re a poet of connection, weaving beauty between strangers. But you dissolve under criticism. Not every piece of yourself must be understood."
+  },
+  {
+    "western": "Gemini",
+    "chinese": "Monkey",
+    "vibe": "Clever Conversationalist",
+    "description": "Two jesters playing chess. Gemini thinks fast, Monkey faster. You outwit, outtalk, outmaneuver—but risk forgetting why. Beneath the brilliance lies fear of silence. Dive into it. There’s treasure in your stillness too."
+  },
+  {
+    "western": "Gemini",
+    "chinese": "Rooster",
+    "vibe": "Precise Communicator",
+    "description": "Rooster polishes what Gemini improvises. You’re a master of messaging, a technician of the tongue. But perfection can sterilize magic. Leave room for chaos—it’s where your most human truths live."
+  },
+  {
+    "western": "Gemini",
+    "chinese": "Dog",
+    "vibe": "Loyal Friend",
+    "description": "Talkative soul with a guarded heart. Gemini explores, Dog devotes. You crave new voices, but only trust old ones. You’re a paradox: socially fearless, emotionally hesitant. Letting others see your stillness is your bravest act."
+  },
+  {
+    "western": "Gemini",
+    "chinese": "Pig",
+    "vibe": "Social Optimist",
+    "description": "You laugh at the absurdity of existence. Gemini’s mind finds warmth in Pig’s joy, making you a radiant communicator. But beneath your levity is a fear of going deep. Intimacy will not shatter you—it will ground you."
+  },
+
+
+    {
+      "western": "Cancer",
+      "chinese": "Rat",
+      "vibe": "Nurturing Strategist",
+      "description": "You build shelters in the middle of storms. Cancer brings heart, Rat brings cunning—you see emotional landscapes like maps. But your instinct to protect can become control. Love is not a fortress; it must be lived, not managed."
+    },
+    {
+      "western": "Cancer",
+      "chinese": "Ox",
+      "vibe": "Protective Provider",
+      "description": "Stone and water. You are the embodiment of sacred duty, quietly anchoring those around you. But your burden is silence—you hold pain like it's your job. Let others carry you sometimes. Even pillars deserve rest."
+    },
+    {
+      "western": "Cancer",
+      "chinese": "Tiger",
+      "vibe": "Courageous Caretaker",
+      "description": "A warrior disguised as a healer. Cancer nurtures, Tiger defends. You fight for what you love, even if no one sees the battle. But you burn when your care isn’t returned. Learn to give without expectation and receive without guilt."
+    },
+    {
+      "western": "Cancer",
+      "chinese": "Cat",
+      "vibe": "Gentle Guardian",
+      "description": "Soft-footed, sharp-eyed. You create safety without noise, beauty without demand. Cancer’s depth meets Cat’s elegance, crafting a presence that soothes and haunts. But you vanish when conflict rises. Being seen won’t ruin you—it might just heal you."
+    },
+    {
+      "western": "Cancer",
+      "chinese": "Dragon",
+      "vibe": "Powerful Nurturer",
+      "description": "You cradle galaxies. Dragon magnifies Cancer’s protective nature, making your love legendary. You uplift, empower, restore—but often neglect yourself in the process. The healer must also be held."
+    },
+    {
+      "western": "Cancer",
+      "chinese": "Snake",
+      "vibe": "Intuitive Caretaker",
+      "description": "Wisdom in water form. Cancer feels; Snake knows. Together, you glide through emotion with surgical grace. But your gift of insight can become isolation. Let people misunderstand you—it’s not your job to be legible."
+    },
+    {
+      "western": "Cancer",
+      "chinese": "Horse",
+      "vibe": "Adventurous Homebody",
+      "description": "Contradiction made flesh. Cancer clings to home, Horse bolts from it. You long to belong while craving freedom. Learn to carry home within you—everywhere you go can be sacred if you anchor yourself first."
+    },
+    {
+      "western": "Cancer",
+      "chinese": "Goat",
+      "vibe": "Creative Caretaker",
+      "description": "You turn pain into poetry. Cancer’s devotion meets Goat’s sensitivity, making you a divine vessel for emotional art. But when no one praises your creation, you crumble. Remember: beauty doesn’t need applause to be sacred."
+    },
+    {
+      "western": "Cancer",
+      "chinese": "Monkey",
+      "vibe": "Playful Protector",
+      "description": "You wear armor made of humor. Cancer shields, Monkey deflects. You protect with wit and charm, but it’s a mask too. Vulnerability is not weakness—it’s how the right people find you."
+    },
+    {
+      "western": "Cancer",
+      "chinese": "Rooster",
+      "vibe": "Organized Nurturer",
+      "description": "Aesthetic precision meets soul care. Rooster makes structure of Cancer’s emotional world. You build sanctuaries from chaos—but risk becoming rigid. Life isn’t a museum. Let mess exist without shame."
+    },
+    {
+      "western": "Cancer",
+      "chinese": "Dog",
+      "vibe": "Loyal Guardian",
+      "description": "A bond too deep to name. Cancer’s love fuses with Dog’s devotion, making you a protector in all dimensions. You’ll go to war for your people—but your resentment festers when unreciprocated. Boundaries are sacred too."
+    },
+    {
+      "western": "Cancer",
+      "chinese": "Pig",
+      "vibe": "Comfort Creator",
+      "description": "Sanctuary in human form. You nurture joy, ease, and connection—but your generosity can drain you. Learn to say no before your spirit whispers it for you. Your comfort should include yourself."
+    },
+
+
+    {
+      "western": "Leo",
+      "chinese": "Rat",
+      "vibe": "Charismatic Leader",
+      "description": "Leo’s fire meets Rat’s calculation—you lead with radiance and strategy. People orbit you instinctively, but not all applause is love. Beware the mask that smiles for approval; your soul craves more than performance."
+    },
+    {
+      "western": "Leo",
+      "chinese": "Ox",
+      "vibe": "Majestic Worker",
+      "description": "You are the architect of empires, building legacy with flair and force. Ox stabilizes Leo’s shine, turning momentary fame into lasting impact. But your pride resists assistance—learn that greatness can still be collaborative."
+    },
+    {
+      "western": "Leo",
+      "chinese": "Tiger",
+      "vibe": "Bold Commander",
+      "description": "Double flame, double fang. Tiger fuels Leo’s audacity, creating a figure who commands, conquers, and captivates. But your need to dominate may isolate you. True kings don’t roar—they listen."
+    },
+    {
+      "western": "Leo",
+      "chinese": "Cat",
+      "vibe": "Graceful Star",
+      "description": "All eyes on you, but you already knew that. Cat brings elegance to Leo’s theatrical heart—you shine without effort. But deep down, you ache for authenticity. Let someone backstage. Let them see you unlit."
+    },
+    {
+      "western": "Leo",
+      "chinese": "Dragon",
+      "vibe": "Royal Powerhouse",
+      "description": "You are myth walking—Leo's crown kissed by Dragon’s divine spark. Glory comes easy, but humility doesn’t. Your light can warm or burn. Rule wisely, or risk becoming the villain in your own legend."
+    },
+    {
+      "western": "Leo",
+      "chinese": "Snake",
+      "vibe": "Strategic Leader",
+      "description": "Theatrics meets mastery. Snake teaches Leo when to strike, not just shine. You’re magnetic and intelligent, but prone to detachment when unappreciated. Don’t sacrifice connection on the altar of control."
+    },
+    {
+      "western": "Leo",
+      "chinese": "Horse",
+      "vibe": "Dynamic Performer",
+      "description": "Energy radiates from you like a solar flare. Horse adds restless spirit to Leo’s desire for attention. You inspire movement, celebration, and envy. But when the crowd leaves, who remains? Let your inner world matter more than the stage."
+    },
+    {
+      "western": "Leo",
+      "chinese": "Goat",
+      "vibe": "Creative Star",
+      "description": "Your soul paints in gold and shadow. Goat brings artistry to Leo’s fire, producing expressions both gorgeous and gutting. You live to create—but when the muse fades, so do you. Ground your identity in more than applause."
+    },
+    {
+      "western": "Leo",
+      "chinese": "Monkey",
+      "vibe": "Entertaining Leader",
+      "description": "Charisma meets cleverness—dangerous in the best way. You charm, provoke, and perform with precision. But you often hide pain in punchlines. Vulnerability will not dull your light; it will deepen it."
+    },
+    {
+      "western": "Leo",
+      "chinese": "Rooster",
+      "vibe": "Regal Performer",
+      "description": "Aesthetic obsession meets spotlight hunger. Rooster gives Leo sharp taste and ceremonial poise. You curate your existence with intention, but forget to live it unfiltered. Shine, but not at the expense of feeling."
+    },
+    {
+      "western": "Leo",
+      "chinese": "Dog",
+      "vibe": "Loyal Leader",
+      "description": "Courage tempered by conscience. Dog’s loyalty balances Leo’s need for recognition—you’re a protector as much as a performer. But you’re wounded when devotion isn’t returned. Learn to lead without needing worship."
+    },
+    {
+      "western": "Leo",
+      "chinese": "Pig",
+      "vibe": "Generous Star",
+      "description": "You radiate joy like it’s sacred. Pig infuses Leo’s fire with warmth and honesty. You make others feel seen, valued, adored—but risk giving until you’re empty. Remember: the sun rests too. Burnout is not the price of love."
+    },
+
+
+    {
+      "western": "Virgo",
+      "chinese": "Rat",
+      "vibe": "Precise Problem-Solver",
+      "description": "You dissect the world to understand it, then reassemble it better. Virgo sharpens Rat’s cleverness into quiet mastery. Your flaw is overthinking—intellect becomes a cage if you never act. Perfection is a ghost. Breathe and build anyway."
+    },
+    {
+      "western": "Virgo",
+      "chinese": "Ox",
+      "vibe": "Meticulous Worker",
+      "description": "Steel resolve in a velvet shell. Ox steadies Virgo’s constant refinement, forging a mind that does not rest until order is restored. But you equate value with output. Rest isn’t weakness—it’s maintenance for brilliance."
+    },
+    {
+      "western": "Virgo",
+      "chinese": "Tiger",
+      "vibe": "Organized Warrior",
+      "description": "Precision meets power. Virgo designs the strategy, Tiger executes with instinct. You’re a quiet commander, able to turn chaos into clean movement. But rage repressed becomes corrosion. Let yourself break form when needed."
+    },
+    {
+      "western": "Virgo",
+      "chinese": "Cat",
+      "vibe": "Graceful Perfectionist",
+      "description": "You move with invisible elegance. Virgo analyzes, Cat intuitively corrects course. Your flaw is hiding in competence—people admire your polish but miss your soul. Show the mess. Let someone fall for your rough edges."
+    },
+    {
+      "western": "Virgo",
+      "chinese": "Dragon",
+      "vibe": "Strategic Achiever",
+      "description": "Virgo architects the dream, Dragon makes it myth. You build systems that outlast you, fueled by vision and relentless discernment. But ego cloaked in service is still ego. Let yourself be human, not just useful."
+    },
+    {
+      "western": "Virgo",
+      "chinese": "Snake",
+      "vibe": "Wise Analyst",
+      "description": "Double minds, infinite filters. Snake adds quiet mysticism to Virgo’s logic. You see beneath the surface—efficiently, elegantly. But knowing too much can turn you cold. Empathy must sit beside insight if you want to heal."
+    },
+    {
+      "western": "Virgo",
+      "chinese": "Horse",
+      "vibe": "Efficient Explorer",
+      "description": "You move with purpose, never just for the thrill. Horse gives Virgo motion without losing method. You crave experience, but must process it through systems. Let go of the need to catalog every moment—some truths only live in feeling."
+    },
+    {
+      "western": "Virgo",
+      "chinese": "Goat",
+      "vibe": "Artistic Perfectionist",
+      "description": "Virgo structures, Goat imagines. You sculpt beauty with both hands—one clean, one wild. But your heart often feels unseen beneath the work. Art doesn’t need to be perfect. It needs to be honest."
+    },
+    {
+      "western": "Virgo",
+      "chinese": "Monkey",
+      "vibe": "Clever Organizer",
+      "description": "You engineer joy. Monkey adds humor and chaos to Virgo’s tidy mind, making you a playful technician of reality. But you distract from depth with intellect. Not everything must be solved—some things just need to be held."
+    },
+    {
+      "western": "Virgo",
+      "chinese": "Rooster",
+      "vibe": "Detail-Oriented Perfectionist",
+      "description": "Sharp eyes. Sharp tongue. You crave refinement in all forms—speech, style, systems. Virgo and Rooster double down on excellence. But obsession can replace intuition. Know when to release the plan and trust the pulse."
+    },
+    {
+      "western": "Virgo",
+      "chinese": "Dog",
+      "vibe": "Loyal Helper",
+      "description": "Service is sacred to you. Virgo brings precision, Dog brings devotion—you fix what others break, quietly and completely. But resentment festers when you aren’t seen. Help less to earn love, and more because you already are it."
+    },
+    {
+      "western": "Virgo",
+      "chinese": "Pig",
+      "vibe": "Practical Optimist",
+      "description": "You translate hope into spreadsheets. Virgo refines Pig’s idealism, making your kindness tangible. But your need for order can stifle spontaneity. Let joy exist in chaos—it’s where the real magic hides."
+    },
+
+
+    {
+      "western": "Libra",
+      "chinese": "Rat",
+      "vibe": "Charming Strategist",
+      "description": "Your grace disarms, your mind dissects. Libra tempers Rat’s schemes with poise, creating a master of social chess. You never move without purpose, but risk becoming a diplomat of your own downfall. Speak your truth, even if it breaks the balance."
+    },
+    {
+      "western": "Libra",
+      "chinese": "Ox",
+      "vibe": "Steady Peacemaker",
+      "description": "You are the still lake and the stone beneath it. Ox stabilizes Libra’s indecision, making you a builder of peace, not just a seeker of it. But you hold too much. Harmony doesn’t mean self-erasure."
+    },
+    {
+      "western": "Libra",
+      "chinese": "Tiger",
+      "vibe": "Diplomatic Rebel",
+      "description": "Charm with claws. Tiger gives Libra teeth—you fight for beauty and justice alike. People trust your voice, but fear your wrath. Learn when to compromise and when to roar."
+    },
+    {
+      "western": "Libra",
+      "chinese": "Cat",
+      "vibe": "Elegant Observer",
+      "description": "Cat moves like silk, Libra speaks like perfume. Together, you read rooms like scripture. But detachment becomes your defense. Be seen. Being known won’t destroy the mystery—it will deepen it."
+    },
+    {
+      "western": "Libra",
+      "chinese": "Dragon",
+      "vibe": "Visionary Charmer",
+      "description": "You sell dreams with a smile. Dragon expands Libra’s aesthetic mind into the realm of power—you don’t just influence, you enchant. But your image can trap you. Let people love what’s beneath the polish."
+    },
+    {
+      "western": "Libra",
+      "chinese": "Snake",
+      "vibe": "Subtle Diplomat",
+      "description": "You win wars without raising your voice. Libra’s balance meets Snake’s calculated wisdom—you strike once, and precisely. But cold logic can starve the heart. Let emotion interrupt your strategy sometimes."
+    },
+    {
+      "western": "Libra",
+      "chinese": "Horse",
+      "vibe": "Graceful Adventurer",
+      "description": "You seek meaning in motion. Horse gives Libra velocity—you drift toward beauty and run from conflict. But freedom without roots becomes exile. Stability doesn’t have to be a cage."
+    },
+    {
+      "western": "Libra",
+      "chinese": "Goat",
+      "vibe": "Artistic Idealist",
+      "description": "Romantic to the core. Libra dreams in aesthetics, Goat manifests it in texture. You build worlds of softness, but bruise easily. Your gift is divine perception—but perfection isn’t your purpose. Vulnerability is."
+    },
+    {
+      "western": "Libra",
+      "chinese": "Monkey",
+      "vibe": "Clever Harmonizer",
+      "description": "Wit and poise, wrapped in charm. Monkey sharpens Libra’s social mastery—you play every side, often for peace, sometimes for pleasure. But depth suffers when you perform connection. Risk authenticity, even if it’s messy."
+    },
+    {
+      "western": "Libra",
+      "chinese": "Rooster",
+      "vibe": "Polished Visionary",
+      "description": "Elegance becomes ideology. Libra and Rooster obsess over order and beauty—you are curated, composed, controlled. But your soul longs to breathe. Let the cracks in your image show—they’ll let light in."
+    },
+    {
+      "western": "Libra",
+      "chinese": "Dog",
+      "vibe": "Just Companion",
+      "description": "You love with principle. Libra gives diplomacy, Dog adds devotion. You crave fairness more than affection. But your standards can isolate you. Remember: love doesn’t always look the way justice demands."
+    },
+    {
+      "western": "Libra",
+      "chinese": "Pig",
+      "vibe": "Gentle Peacemaker",
+      "description": "Soft hearts, strong intentions. Libra harmonizes Pig’s optimism—you soothe, connect, resolve. But you avoid conflict until it festers. Peace is not the absence of noise—it’s the result of courageous clarity."
+    },
+
+
+  {
+    "western": "Scorpio",
+    "chinese": "Rat",
+    "vibe": "Strategic Intuitive",
+    "description": "You don’t guess—you know. Rat’s mental sharpness fuses with Scorpio’s soul-sight, creating someone who sees five layers deeper than the room. But knowing isn’t the same as connecting. Don’t let mistrust keep you lonely."
+  },
+  {
+    "western": "Scorpio",
+    "chinese": "Ox",
+    "vibe": "Relentless Alchemist",
+    "description": "Ox gives structure to Scorpio’s obsession—you endure, dig, and rebuild, all in silence. You're the type to change a life without a word. But stillness can calcify. Remember: transformation also requires movement."
+  },
+  {
+    "western": "Scorpio",
+    "chinese": "Tiger",
+    "vibe": "Fierce Transformer",
+    "description": "Power meets presence. Tiger gives Scorpio a body to house its storm. You’re dangerous, passionate, and unforgettable. But rage can rot from the inside if not released. Fight, but learn to forgive yourself too."
+  },
+  {
+    "western": "Scorpio",
+    "chinese": "Cat",
+    "vibe": "Mysterious Visionary",
+    "description": "Both silent and watching. Scorpio’s intensity meets Cat’s poise, and the result is a presence that unnerves and intrigues. But being unknowable can turn into being unreachable. Vulnerability is not exposure—it’s evolution."
+  },
+  {
+    "western": "Scorpio",
+    "chinese": "Dragon",
+    "vibe": "Mythic Force",
+    "description": "You were born to resurrect and reign. Dragon amplifies Scorpio’s sacred power—you don’t just survive, you ascend. But godhood has a cost. Don’t become so obsessed with control that you forget to feel joy."
+  },
+  {
+    "western": "Scorpio",
+    "chinese": "Snake",
+    "vibe": "Occult Mastermind",
+    "description": "Snake and Scorpio speak the same dialect of silence. You understand things before they’re said, and move through the world like a riddle. But isolation is not strength. Let someone decode you once in a while."
+  },
+  {
+    "western": "Scorpio",
+    "chinese": "Horse",
+    "vibe": "Intense Wanderer",
+    "description": "You run from yourself and into yourself at the same time. Horse adds motion to Scorpio’s still water, creating endless cycles of rebirth and escape. Your soul is nomadic, but transformation doesn’t require exile."
+  },
+  {
+    "western": "Scorpio",
+    "chinese": "Goat",
+    "vibe": "Emotional Alchemist",
+    "description": "You feel everything and then some. Goat softens Scorpio’s edge, adding artistry to the abyss. You turn pain into ritual. But when emotions flood you, you vanish. Stay present—it’s the only way out."
+  },
+  {
+    "western": "Scorpio",
+    "chinese": "Monkey",
+    "vibe": "Clever Manipulator",
+    "description": "You’re always five moves ahead. Monkey plays, Scorpio plots. Together, you can charm or dismantle anyone. But connection becomes a game too easily. Let love in without needing to control the outcome."
+  },
+  {
+    "western": "Scorpio",
+    "chinese": "Rooster",
+    "vibe": "Dark Aesthetic",
+    "description": "Rooster adds refinement to Scorpio’s obsession—you are the curator of moods, symbols, and hidden truths. But image can become armor. Let someone love you without needing to earn it."
+  },
+  {
+    "western": "Scorpio",
+    "chinese": "Dog",
+    "vibe": "Loyal Mystic",
+    "description": "Scorpio craves loyalty, Dog *is* loyalty. You love like a sacred vow—protective, total, unshakable. But betrayal cuts so deep it can turn you to stone. Don’t lose your softness trying to avoid the wound."
+  },
+  {
+    "western": "Scorpio",
+    "chinese": "Pig",
+    "vibe": "Healing Intuitive",
+    "description": "You blend darkness with light, instinct with compassion. Pig adds warmth to Scorpio’s depth—you’re the healer who understands pain from the inside. But you give until you're empty. Hold something back for you."
+  },
+
+
+   {
+    "western": "Sagittarius",
+    "chinese": "Rat",
+    "vibe": "Restless Visionary",
+    "description": "You think fast, move faster. Rat adds calculation to Sagittarius’ wild optimism, making you a strategist of the impossible. But your mind never stops. Learn to sit with meaning instead of chasing new distractions."
+  },
+  {
+    "western": "Sagittarius",
+    "chinese": "Ox",
+    "vibe": "Grounded Seeker",
+    "description": "Ox slows Sagittarius' wild fire into something lasting. You seek freedom, but also purpose, and that tension defines you. Stillness doesn’t mean stagnation. Learn to root without rotting."
+  },
+  {
+    "western": "Sagittarius",
+    "chinese": "Tiger",
+    "vibe": "Fearless Explorer",
+    "description": "Double wild. Tiger adds teeth to Sagittarius’ curiosity—you don’t explore, you devour. Adventure is your birthright, but your danger is boredom. Learn to sit in wonder without needing to run from it."
+  },
+  {
+    "western": "Sagittarius",
+    "chinese": "Cat",
+    "vibe": "Philosophical Nomad",
+    "description": "You move through life like a riddle wrapped in silk. Cat refines Sagittarius’ wanderlust into aesthetic seeking. You're more monk than madman—but loneliness hides behind your elegance. Don’t confuse solitude with safety."
+  },
+  {
+    "western": "Sagittarius",
+    "chinese": "Dragon",
+    "vibe": "Cosmic Crusader",
+    "description": "You were born to lead mythic quests. Dragon amplifies Sagittarius’ divine fire, turning curiosity into prophecy. You’re a visionary, but can’t live in ideas alone. Touch earth. Build what you see."
+  },
+  {
+    "western": "Sagittarius",
+    "chinese": "Snake",
+    "vibe": "Wise Wanderer",
+    "description": "You learn through travel and dream through silence. Snake adds psychic precision to Sagittarius’ expansion. You're mystical, but prone to detaching from the now. Wisdom is useless without embodiment."
+  },
+  {
+    "western": "Sagittarius",
+    "chinese": "Horse",
+    "vibe": "Unchained Wildfire",
+    "description": "No fences, no masters. Sagittarius and Horse both chase open skies—you are motion incarnate. You’re electric, exhilarating, and exhausting. Don’t outrun the love trying to catch you."
+  },
+  {
+    "western": "Sagittarius",
+    "chinese": "Goat",
+    "vibe": "Creative Pilgrim",
+    "description": "You dream in symbols and move through myth. Goat adds emotional resonance to Sagittarius’ search for truth. You seek sacred beauty—but despair when it feels out of reach. Sometimes, the answer *is* the journey."
+  },
+  {
+    "western": "Sagittarius",
+    "chinese": "Monkey",
+    "vibe": "Jester Prophet",
+    "description": "You joke to avoid the void. Monkey sharpens Sagittarius’ absurdism, creating a philosopher disguised as a clown. But behind the laughter is aching meaning. Let others see what lies beneath the mask."
+  },
+  {
+    "western": "Sagittarius",
+    "chinese": "Rooster",
+    "vibe": "Orderly Explorer",
+    "description": "Rooster brings precision to Sagittarius’ wanderlust—you build systems for seeking. But your obsession with truth can become doctrine. Stay curious. Wonder doesn’t need rules."
+  },
+  {
+    "western": "Sagittarius",
+    "chinese": "Dog",
+    "vibe": "Devoted Idealist",
+    "description": "You fight for freedom, but stay for loyalty. Dog grounds Sagittarius’ flight in love and justice. But when ideals break, you break too. Let people be messy—it doesn’t mean the mission is lost."
+  },
+  {
+    "western": "Sagittarius",
+    "chinese": "Pig",
+    "vibe": "Joyful Wanderer",
+    "description": "You are warmth on the wind. Pig brings softness to Sagittarius’ speed—you travel not just to escape, but to connect. But you give too freely. Boundaries let you keep giving without burning out."
+  },
+
+
+   {
+    "western": "Capricorn",
+    "chinese": "Rat",
+    "vibe": "Strategic Architect",
+    "description": "You build for forever. Capricorn brings the structure, Rat brings the schemes—you’re a tactician in the temple of time. But control can become isolation. Don’t let strategy rob you of soul."
+  },
+  {
+    "western": "Capricorn",
+    "chinese": "Ox",
+    "vibe": "Enduring Titan",
+    "description": "Two earthbound gods. Ox deepens Capricorn’s slow grind into sacred labor. You endure what others flee, build what others fear. But never mistake suffering for worth. You’re allowed to rest."
+  },
+  {
+    "western": "Capricorn",
+    "chinese": "Tiger",
+    "vibe": "Disciplined Warrior",
+    "description": "Ambition with bite. Tiger gives Capricorn boldness—you don’t just plan, you strike. You hold power without show. But your temper can erupt beneath that cold exterior. Learn when to release, not suppress."
+  },
+  {
+    "western": "Capricorn",
+    "chinese": "Cat",
+    "vibe": "Composed Visionary",
+    "description": "You are grace under pressure. Cat adds subtlety to Capricorn’s intense focus, giving you an uncanny ability to move with silent power. But your poise hides your pain. Vulnerability won’t destroy your image—it’ll refine it."
+  },
+  {
+    "western": "Capricorn",
+    "chinese": "Dragon",
+    "vibe": "Mythic Builder",
+    "description": "Dragon breathes divinity into Capricorn’s ambition—you construct kingdoms with one hand and destroy limitations with the other. But obsession with legacy can blind you to the present. Be here now, not just in what comes after."
+  },
+  {
+    "western": "Capricorn",
+    "chinese": "Snake",
+    "vibe": "Wise Strategist",
+    "description": "Snake whispers to Capricorn’s spine—you are still, patient, and deadly in your precision. You sense timing like a sixth sense. But silence becomes isolation. Let someone know what you carry."
+  },
+  {
+    "western": "Capricorn",
+    "chinese": "Horse",
+    "vibe": "Ambitious Nomad",
+    "description": "You climb mountains, but only if you can choose the range. Horse adds movement to Capricorn’s fixed nature—you want control *and* freedom. Find meaning not just in achievement, but in wonder."
+  },
+  {
+    "western": "Capricorn",
+    "chinese": "Goat",
+    "vibe": "Creative Builder",
+    "description": "You craft beauty from stone. Goat softens Capricorn’s rigidity with imagination—you’re an artist in a warrior’s shell. But fear of failure stifles you. Perfection is the enemy of birth. Just begin."
+  },
+  {
+    "western": "Capricorn",
+    "chinese": "Monkey",
+    "vibe": "Clever Mastermind",
+    "description": "You’re ten moves ahead and two dimensions deep. Monkey adds play to Capricorn’s grind—you mask genius with charm. But cynicism creeps in when plans go off-course. Let chaos surprise you. You’re not losing control—you’re growing."
+  },
+  {
+    "western": "Capricorn",
+    "chinese": "Rooster",
+    "vibe": "Disciplined Idealist",
+    "description": "You strive for excellence like it’s a moral code. Rooster sharpens Capricorn’s discernment—you live by design. But rigidity becomes a religion. Don’t worship the plan. Let some things unfold."
+  },
+  {
+    "western": "Capricorn",
+    "chinese": "Dog",
+    "vibe": "Loyal Builder",
+    "description": "Capricorn brings the scaffolding, Dog brings the oath. You build slowly, love deeply, and protect fiercely. But devotion turns heavy when it’s unreciprocated. Let go of people who can’t carry what you’re carrying for them."
+  },
+  {
+    "western": "Capricorn",
+    "chinese": "Pig",
+    "vibe": "Grounded Optimist",
+    "description": "Pig adds softness to Capricorn’s grind—you work hard, but with heart. You believe in effort *and* joy. But when the joy fades, you retreat into numbness. Let play be part of your discipline. They’re not opposites—they’re partners."
+  },
+
+
+  {
+    "western": "Aquarius",
+    "chinese": "Rat",
+    "vibe": "Innovative Thinker",
+    "description": "Your mind is electric. Aquarius dreams the system, Rat hacks it. You rewire the rules from the inside out. But intelligence without connection is exile. Let others touch your signal—even if they don't understand it yet."
+  },
+  {
+    "western": "Aquarius",
+    "chinese": "Ox",
+    "vibe": "Patient Visionary",
+    "description": "Ox anchors Aquarius’ future-casting. You build what others only imagine. Your ideas are slow-burning revolutions—but you resist change in yourself. Don’t let your vision calcify into doctrine."
+  },
+  {
+    "western": "Aquarius",
+    "chinese": "Tiger",
+    "vibe": "Radical Rebel",
+    "description": "Tiger gives claws to Aquarius’ idealism—you don’t just dream change, you *demand* it. You clash with convention, crack open stale systems. But rebellion can become identity. Don’t burn bridges you might one day need to cross."
+  },
+  {
+    "western": "Aquarius",
+    "chinese": "Cat",
+    "vibe": "Detached Oracle",
+    "description": "You are elegance encoded. Cat adds grace to Aquarius’ detachment—you observe the world like a living symbol. You feel everything but express little. Let someone *in*—the message is stronger when shared."
+  },
+  {
+    "western": "Aquarius",
+    "chinese": "Dragon",
+    "vibe": "Electric Royalty",
+    "description": "This is power from another plane. Dragon magnifies Aquarius’ cosmic vision—you speak in paradigms. But your ego hides behind ‘objectivity.’ Step down from the tower sometimes. The revolution starts eye-to-eye."
+  },
+  {
+    "western": "Aquarius",
+    "chinese": "Snake",
+    "vibe": "Occult Scientist",
+    "description": "Aquarius maps the sky, Snake navigates the shadows. You see what others can’t name. Your wisdom is cool, ancient, alien. But secrecy becomes suffocation. Share your knowledge—alchemy is meant to be lived."
+  },
+  {
+    "western": "Aquarius",
+    "chinese": "Horse",
+    "vibe": "Liberated Thinker",
+    "description": "You are thought in motion. Horse gives legs to Aquarius’ theories—you move fast, live free, and fear being pinned down. But detachment becomes escape. Freedom means nothing if you’re always alone."
+  },
+  {
+    "western": "Aquarius",
+    "chinese": "Goat",
+    "vibe": "Visionary Creator",
+    "description": "You dream in symbols, code in aesthetics. Goat adds feeling to Aquarius’ logic—you’re a builder of strange, soft futures. But idealism can breed disappointment. Let things be flawed. That’s where the real beauty breathes."
+  },
+  {
+    "western": "Aquarius",
+    "chinese": "Monkey",
+    "vibe": "Trickster Engineer",
+    "description": "You’re wired for chaos and clarity. Aquarius invents, Monkey disrupts—you’re the glitch in the matrix *on purpose*. But your genius can become noise. Don’t forget: some systems need healing, not breaking."
+  },
+  {
+    "western": "Aquarius",
+    "chinese": "Rooster",
+    "vibe": "Polished Innovator",
+    "description": "Rooster gives form to Aquarius’ vision—you architect beauty with logic. You’re composed, collected, and slightly untouchable. But polish can become armor. Let the mess through—it proves you’re real."
+  },
+  {
+    "western": "Aquarius",
+    "chinese": "Dog",
+    "vibe": "Revolutionary Ally",
+    "description": "Aquarius craves change, Dog craves loyalty. You fight for people—even when they don’t understand what you’re building. But resentment festers when you're unrecognized. Remember: you’re not alone in this mission."
+  },
+  {
+    "western": "Aquarius",
+    "chinese": "Pig",
+    "vibe": "Utopian Humanist",
+    "description": "You believe in people, even when they fail you. Pig brings warmth to Aquarius’ idealism—you dream of a better world and try to live it. But you give too much to the dream. Take care of your body while you save the planet."
+  },
+
+
+  {
+    "western": "Pisces",
+    "chinese": "Rat",
+    "vibe": "Emotional Strategist",
+    "description": "You dream with intent. Pisces feels the collective ache, Rat plots a path through it. You're a healer who knows how to navigate the void. But manipulation can masquerade as care. Be honest about your motives—even with yourself."
+  },
+  {
+    "western": "Pisces",
+    "chinese": "Ox",
+    "vibe": "Spiritual Builder",
+    "description": "Ox grounds Pisces’ infinite soul into sacred structure. You manifest visions with quiet discipline. But you risk becoming numb under pressure. Make space to feel, not just to function."
+  },
+  {
+    "western": "Pisces",
+    "chinese": "Tiger",
+    "vibe": "Mystical Rebel",
+    "description": "You destroy illusions with compassion. Tiger fuels Pisces’ emotional depth with instinct and fire. You're unpredictable, soft and savage. But self-sabotage follows when you mistake chaos for freedom."
+  },
+  {
+    "western": "Pisces",
+    "chinese": "Cat",
+    "vibe": "Dreamy Observer",
+    "description": "You slip between realms unnoticed. Cat gives Pisces grace and detachment—you are ethereal, poetic, a ghost wrapped in silk. But detachment becomes exile. Let someone see you *before* you disappear."
+  },
+  {
+    "western": "Pisces",
+    "chinese": "Dragon",
+    "vibe": "Visionary Mystic",
+    "description": "Dragon gives power to Pisces' dreams. You walk between prophet and performer—divine, magnetic, haunted. But illusion is your poison. Don't just *appear* awakened—do the work beneath the glitter."
+  },
+  {
+    "western": "Pisces",
+    "chinese": "Snake",
+    "vibe": "Psychic Oracle",
+    "description": "You read souls like scripts. Pisces senses, Snake sees—you are beyond language. But silence can become a weapon. Let others know what you know. Gatekeeping truth only isolates the healer."
+  },
+  {
+    "western": "Pisces",
+    "chinese": "Horse",
+    "vibe": "Restless Dreamer",
+    "description": "You drift fast. Horse adds urgency to Pisces’ ocean—you seek new meaning in every horizon. But constant movement can be a trauma response. Let yourself stay. Stillness doesn’t mean drowning."
+  },
+  {
+    "western": "Pisces",
+    "chinese": "Goat",
+    "vibe": "Emotional Artist",
+    "description": "You feel *everything*—then paint it. Pisces and Goat merge into divine softness, dream logic, and sacred melancholy. But sensitivity without boundaries becomes self-erasure. Let your art protect you too."
+  },
+  {
+    "western": "Pisces",
+    "chinese": "Monkey",
+    "vibe": "Surreal Trickster",
+    "description": "You're a holy prank. Pisces dissolves reality, Monkey bends it. You make others question what’s real—sometimes even yourself. But deflection can mask despair. Be honest about what hurts beneath the smile."
+  },
+  {
+    "western": "Pisces",
+    "chinese": "Rooster",
+    "vibe": "Aesthetic Mystic",
+    "description": "Pisces dreams in chaos, Rooster outlines it. You channel visions through structure—ritual, design, ceremony. But beauty becomes prison when it replaces truth. Let the spirit speak louder than the format."
+  },
+  {
+    "western": "Pisces",
+    "chinese": "Dog",
+    "vibe": "Empathic Protector",
+    "description": "You carry the weight of others like it’s holy. Pisces’ compassion and Dog’s loyalty make you a selfless guardian. But martyrdom is not healing. You’re not here to drown in other people’s pain."
+  },
+  {
+    "western": "Pisces",
+    "chinese": "Pig",
+    "vibe": "Compassionate Dreamer",
+    "description": "Pure-hearted and eternal. Pig sweetens Pisces' cosmic empathy—you radiate healing. But your kindness gets mistaken for weakness. Protect your tenderness. It’s not naivety—it’s your power."
+  }
+] 

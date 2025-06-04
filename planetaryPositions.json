@@ -1,0 +1,36 @@
+[
+  {
+    "planet": "Saturn",
+    "positions": [
+      { "sign": "Aries", "interpretation": "Challenges with identity and self-assertion. Learning patience in pursuit of personal goals." },
+      { "sign": "Taurus", "interpretation": "Restrictions around material security and resources. Learning discipline in financial matters." },
+      { "sign": "Gemini", "interpretation": "Challenges with communication and mental flexibility. Learning structured thinking and careful expression." },
+      { "sign": "Cancer", "interpretation": "Emotional barriers and family challenges. Learning emotional self-sufficiency and creating stable foundations." },
+      { "sign": "Leo", "interpretation": "Restrictions around self-expression and creativity. Learning authentic leadership and humble confidence." },
+      { "sign": "Virgo", "interpretation": "Challenges with perfectionism and critical thinking. Learning productive self-discipline and practical service." },
+      { "sign": "Libra", "interpretation": "Difficulties with relationships and balance. Learning commitment and responsibility in partnerships." },
+      { "sign": "Scorpio", "interpretation": "Challenges with control and transformation. Learning to face fears and develop emotional resilience." },
+      { "sign": "Sagittarius", "interpretation": "Restrictions around freedom and belief systems. Learning wisdom through structured exploration." },
+      { "sign": "Capricorn", "interpretation": "Tests of ambition and authority. Learning mastery through discipline and persistence." },
+      { "sign": "Aquarius", "interpretation": "Challenges with innovation and group dynamics. Learning structured revolution and responsible freedom." },
+      { "sign": "Pisces", "interpretation": "Difficulties with boundaries and spiritual connection. Learning grounded compassion and structured intuition." }
+    ]
+  },
+  {
+    "planet": "Venus",
+    "positions": [
+      { "sign": "Aries", "interpretation": "Direct and passionate in love. Values independence and excitement in relationships. May rush into romance." },
+      { "sign": "Taurus", "interpretation": "Sensual and steadfast in love. Values stability and comfort in relationships. Patient and loyal partner." },
+      { "sign": "Gemini", "interpretation": "Intellectually engaged in love. Values communication and variety in relationships. Curious and adaptable partner." },
+      { "sign": "Cancer", "interpretation": "Emotionally nurturing in love. Values security and emotional connection in relationships. Protective and caring partner." },
+      { "sign": "Leo", "interpretation": "Dramatic and generous in love. Values appreciation and passion in relationships. Loyal and expressive partner." },
+      { "sign": "Virgo", "interpretation": "Thoughtful and helpful in love. Values quality and improvement in relationships. Attentive and analytical partner." },
+      { "sign": "Libra", "interpretation": "Harmonious and diplomatic in love. Values balance and partnership. Charming and accommodating partner." },
+      { "sign": "Scorpio", "interpretation": "Intense and profound in love. Values depth and transformation in relationships. Passionate and perceptive partner." },
+      { "sign": "Sagittarius", "interpretation": "Adventurous and optimistic in love. Values freedom and growth in relationships. Enthusiastic and honest partner." },
+      { "sign": "Capricorn", "interpretation": "Committed and responsible in love. Values tradition and achievement in relationships. Reliable and measured partner." },
+      { "sign": "Aquarius", "interpretation": "Unconventional and friendly in love. Values independence and innovation in relationships. Unique and progressive partner." },
+      { "sign": "Pisces", "interpretation": "Romantic and compassionate in love. Values spiritual connection and empathy in relationships. Dreamy and accepting partner." }
+    ]
+  }
+] 
