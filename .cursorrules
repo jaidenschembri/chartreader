@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "rules": {
+    "project": {
+      "name": "Astrology Chart Reader",
+      "description": "A web-based application for reading and interpreting astrological charts using Svelte and modern web technologies"
+    },
+    "context": {
+      "tech_stack": [
+        "Svelte",
+        "Vite",
+        "JavaScript",
+        "CSS"
+      ],
+      "key_features": [
+        "Astrological chart visualization",
+        "Chart interpretation",
+        "Planetary positions",
+        "Aspect calculations"
+      ]
+    },
+    "coding_standards": {
+      "style": "modern",
+      "framework": "svelte",
+      "component_structure": "single-file components with script, template, and style sections",
+      "naming_conventions": {
+        "components": "PascalCase",
+        "functions": "camelCase",
+        "variables": "camelCase",
+        "constants": "UPPER_SNAKE_CASE"
+      }
+    },
+    "ai_guidelines": {
+      "code_generation": {
+        "prefer": [
+          "Svelte 5 syntax",
+          "Modern JavaScript features",
+          "Component-based architecture",
+          "Responsive design patterns"
+        ],
+        "avoid": [
+          "jQuery",
+          "Legacy JavaScript patterns",
+          "Global state management unless necessary",
+          "Inline styles"
+        ]
+      },
+      "documentation": {
+        "require": [
+          "Component purpose",
+          "Props interface",
+          "Usage examples",
+          "Important calculations or formulas"
+        ]
+      },
+      "astrology_specific": {
+        "accuracy": "high",
+        "calculations": "precise",
+        "interpretations": "traditional with modern context",
+        "data_structures": "efficient for astronomical calculations"
+      }
+    },
+    "response_format": {
+      "code_blocks": {
+        "language": "svelte",
+        "include_comments": true,
+        "include_explanations": true
+      },
+      "documentation": {
+        "format": "markdown",
+        "include_examples": true
+      }
+    }
+  }
+} 

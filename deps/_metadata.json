@@ -1,0 +1,133 @@
+{
+  "hash": "87b0a844",
+  "configHash": "0d1ffc7b",
+  "lockfileHash": "e6f11e79",
+  "browserHash": "d9b1b667",
+  "optimized": {
+    "svelte": {
+      "src": "../../../../node_modules/svelte/src/index-client.js",
+      "file": "svelte.js",
+      "fileHash": "f0d1f2cd",
+      "needsInterop": false
+    },
+    "svelte/animate": {
+      "src": "../../../../node_modules/svelte/src/animate/index.js",
+      "file": "svelte_animate.js",
+      "fileHash": "5ed56c04",
+      "needsInterop": false
+    },
+    "svelte/easing": {
+      "src": "../../../../node_modules/svelte/src/easing/index.js",
+      "file": "svelte_easing.js",
+      "fileHash": "2c431353",
+      "needsInterop": false
+    },
+    "svelte/internal": {
+      "src": "../../../../node_modules/svelte/src/internal/index.js",
+      "file": "svelte_internal.js",
+      "fileHash": "33c87f51",
+      "needsInterop": true
+    },
+    "svelte/internal/client": {
+      "src": "../../../../node_modules/svelte/src/internal/client/index.js",
+      "file": "svelte_internal_client.js",
+      "fileHash": "f55e383a",
+      "needsInterop": false
+    },
+    "svelte/internal/disclose-version": {
+      "src": "../../../../node_modules/svelte/src/internal/disclose-version.js",
+      "file": "svelte_internal_disclose-version.js",
+      "fileHash": "5d573706",
+      "needsInterop": false
+    },
+    "svelte/internal/flags/legacy": {
+      "src": "../../../../node_modules/svelte/src/internal/flags/legacy.js",
+      "file": "svelte_internal_flags_legacy.js",
+      "fileHash": "c658cf57",
+      "needsInterop": false
+    },
+    "svelte/internal/flags/tracing": {
+      "src": "../../../../node_modules/svelte/src/internal/flags/tracing.js",
+      "file": "svelte_internal_flags_tracing.js",
+      "fileHash": "475c08a5",
+      "needsInterop": false
+    },
+    "svelte/legacy": {
+      "src": "../../../../node_modules/svelte/src/legacy/legacy-client.js",
+      "file": "svelte_legacy.js",
+      "fileHash": "57016c05",
+      "needsInterop": false
+    },
+    "svelte/motion": {
+      "src": "../../../../node_modules/svelte/src/motion/index.js",
+      "file": "svelte_motion.js",
+      "fileHash": "225ad19a",
+      "needsInterop": false
+    },
+    "svelte/reactivity": {
+      "src": "../../../../node_modules/svelte/src/reactivity/index-client.js",
+      "file": "svelte_reactivity.js",
+      "fileHash": "6e9f2f64",
+      "needsInterop": false
+    },
+    "svelte/reactivity/window": {
+      "src": "../../../../node_modules/svelte/src/reactivity/window/index.js",
+      "file": "svelte_reactivity_window.js",
+      "fileHash": "74eba235",
+      "needsInterop": false
+    },
+    "svelte/store": {
+      "src": "../../../../node_modules/svelte/src/store/index-client.js",
+      "file": "svelte_store.js",
+      "fileHash": "254bf20b",
+      "needsInterop": false
+    },
+    "svelte/transition": {
+      "src": "../../../../node_modules/svelte/src/transition/index.js",
+      "file": "svelte_transition.js",
+      "fileHash": "9af3f12c",
+      "needsInterop": false
+    },
+    "svelte/events": {
+      "src": "../../../../node_modules/svelte/src/events/index.js",
+      "file": "svelte_events.js",
+      "fileHash": "c8df0eec",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-4UOAIJXM": {
+      "file": "chunk-4UOAIJXM.js"
+    },
+    "chunk-SW6MHLTC": {
+      "file": "chunk-SW6MHLTC.js"
+    },
+    "chunk-ZPFLGJXZ": {
+      "file": "chunk-ZPFLGJXZ.js"
+    },
+    "chunk-WVSKOR37": {
+      "file": "chunk-WVSKOR37.js"
+    },
+    "chunk-RKQYHM7D": {
+      "file": "chunk-RKQYHM7D.js"
+    },
+    "chunk-IFZ3YZ5Z": {
+      "file": "chunk-IFZ3YZ5Z.js"
+    },
+    "chunk-TX64ZVTN": {
+      "file": "chunk-TX64ZVTN.js"
+    },
+    "chunk-4BX2QEON": {
+      "file": "chunk-4BX2QEON.js"
+    },
+    "chunk-C44JZ7KH": {
+      "file": "chunk-C44JZ7KH.js"
+    },
+    "chunk-3RAUGRGE": {
+      "file": "chunk-3RAUGRGE.js"
+    },
+    "chunk-UGBVNEQM": {
+      "file": "chunk-UGBVNEQM.js"
+    }
+  }
+}
