@@ -21,18 +21,10 @@
   let theme = 'dark'; // default theme
   let showCompatibility = false;
   let showPlanetaryInfo = false;
-  let isMobile = false;
   let resultElement;
 
   onMount(() => {
     try {
-      // Check if mobile device
-      isMobile = window.innerWidth <= 768;
-      const resizeHandler = () => {
-        isMobile = window.innerWidth <= 768;
-      };
-      window.addEventListener('resize', resizeHandler);
-      
       // Initialize theme
       theme = setupTheme();
       
@@ -44,15 +36,9 @@
         error = "Failed to load zodiac data.";
         loading = false;
       });
-      
-      // Return cleanup function
-      return () => {
-        window.removeEventListener('resize', resizeHandler);
-      };
     } catch (err) {
       error = "Failed to load zodiac data.";
       loading = false;
-      return () => {}; // Return empty cleanup function
     }
   });
 
@@ -62,30 +48,10 @@
 
   function toggleCompatibility() {
     showCompatibility = !showCompatibility;
-    
-    // If on mobile and showing compatibility, scroll to it
-    if (isMobile && showCompatibility && resultElement) {
-      setTimeout(() => {
-        const compSection = resultElement.querySelector('.compatibility-section');
-        if (compSection) {
-          compSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-      }, 100);
-    }
   }
   
   function togglePlanetaryInfo() {
     showPlanetaryInfo = !showPlanetaryInfo;
-    
-    // If on mobile and showing planetary info, scroll to it
-    if (isMobile && showPlanetaryInfo && resultElement) {
-      setTimeout(() => {
-        const planetSection = resultElement.querySelector('.planetary-section');
-        if (planetSection) {
-          planetSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-      }, 100);
-    }
   }
 
   function generateProfile() {
