@@ -3,73 +3,127 @@
   "rules": {
     "project": {
       "name": "Astrology Chart Reader",
-      "description": "A web-based application for reading and interpreting astrological charts using Svelte and modern web technologies"
+      "description": "A professional web-based astrology chart reader with precise astronomical calculations, featuring classical document-style design and real-time planetary positioning"
     },
     "context": {
       "tech_stack": [
-        "Svelte",
+        "Svelte 5",
         "Vite",
-        "JavaScript",
-        "CSS"
+        "JavaScript (ES2022+)",
+        "CSS (Custom Properties)",
+        "Astronomia.js Library"
       ],
       "key_features": [
-        "Astrological chart visualization",
-        "Chart interpretation",
-        "Planetary positions",
-        "Aspect calculations"
-      ]
+        "Precise astronomical calculations for planetary positions",
+        "Real-time ascendant (rising sign) calculations using Placidus method",
+        "Venus position calculations using VSOP87 theory",
+        "Location-based timezone and coordinate handling",
+        "Classical document-style chart readings",
+        "Light/dark theme with background imagery",
+        "Professional astrological interpretations",
+        "Chinese zodiac integration",
+        "Compatibility analysis"
+      ],
+      "astronomical_accuracy": {
+        "sun_position": "Solar apparent longitude with precision",
+        "moon_position": "Lunar coordinates from astronomia library",
+        "venus_position": "VSOP87 simplified theory implementation",
+        "ascendant_calculation": "Placidus method with proper sidereal time",
+        "timezone_handling": "Automatic DST detection and UTC conversion",
+        "coordinate_precision": "Geographic coordinates to 4 decimal places"
+      }
     },
     "coding_standards": {
-      "style": "modern",
-      "framework": "svelte",
+      "style": "minimal classical",
+      "framework": "svelte 5",
       "component_structure": "single-file components with script, template, and style sections",
+      "design_philosophy": "Professional astrological document aesthetic",
       "naming_conventions": {
         "components": "PascalCase",
         "functions": "camelCase",
         "variables": "camelCase",
         "constants": "UPPER_SNAKE_CASE"
+      },
+      "css_approach": {
+        "methodology": "CSS custom properties for theming",
+        "typography": "EB Garamond (serif) + Courier Prime (monospace)",
+        "layout": "Document-style with tabular data presentation",
+        "effects": "Subtle glass-morphism with backdrop blur"
       }
     },
     "ai_guidelines": {
       "code_generation": {
         "prefer": [
-          "Svelte 5 syntax",
-          "Modern JavaScript features",
-          "Component-based architecture",
-          "Responsive design patterns"
+          "Svelte 5 syntax and runes",
+          "Modern JavaScript features (ES2022+)",
+          "Astronomical precision in calculations",
+          "Professional astrological terminology",
+          "Clean tabular data presentation",
+          "Glass-morphism design patterns",
+          "Responsive design for all devices"
         ],
         "avoid": [
-          "jQuery",
-          "Legacy JavaScript patterns",
-          "Global state management unless necessary",
-          "Inline styles"
+          "jQuery or legacy frameworks",
+          "Approximate astronomical calculations",
+          "Overly decorative UI elements",
+          "Inline styles",
+          "Global state unless necessary",
+          "Non-semantic HTML structures"
         ]
       },
       "documentation": {
         "require": [
-          "Component purpose",
-          "Props interface",
-          "Usage examples",
-          "Important calculations or formulas"
+          "Astronomical formula explanations",
+          "Calculation methodology notes",
+          "Timezone handling documentation",
+          "Component purpose and props",
+          "Usage examples with birth data"
         ]
       },
       "astrology_specific": {
-        "accuracy": "high",
-        "calculations": "precise",
-        "interpretations": "traditional with modern context",
-        "data_structures": "efficient for astronomical calculations"
+        "accuracy": "astronomical precision required",
+        "calculations": "Use established astronomical libraries",
+        "interpretations": "Traditional astrological wisdom with modern context",
+        "data_structures": "Optimized for real-time calculations",
+        "coordinate_systems": "Ecliptic longitude in degrees (0-360)",
+        "time_handling": "Proper UTC conversion with timezone awareness",
+        "rising_sign_method": "Placidus house system for ascendant calculation"
+      },
+      "design_principles": {
+        "aesthetic": "Classical astrological document",
+        "typography": "Serif for content, monospace for data",
+        "layout": "Structured sections with clear hierarchy",
+        "theming": "Light/dark modes with subtle backgrounds",
+        "interactivity": "Minimal but purposeful animations",
+        "accessibility": "High contrast ratios and keyboard navigation"
       }
     },
     "response_format": {
       "code_blocks": {
         "language": "svelte",
         "include_comments": true,
-        "include_explanations": true
+        "include_explanations": true,
+        "astronomical_formulas": "Document all calculations with sources"
       },
       "documentation": {
         "format": "markdown",
-        "include_examples": true
+        "include_examples": true,
+        "astronomical_references": "Cite sources for calculations"
       }
+    },
+    "libraries_and_dependencies": {
+      "core": {
+        "astronomia": "^4.1.1 - Astronomical calculations library",
+        "svelte": "^5.28.1 - Reactive framework",
+        "vite": "^6.3.5 - Build tool"
+      },
+      "astronomical_modules": [
+        "astronomia/julian - Julian day calculations",
+        "astronomia/solar - Solar position calculations", 
+        "astronomia/moonposition - Lunar coordinates",
+        "astronomia/sidereal - Sidereal time calculations",
+        "astronomia/base - Base astronomical functions"
+      ]
     }
   }
 } 

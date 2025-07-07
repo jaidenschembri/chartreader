@@ -9,10 +9,28 @@
     toggleTheme, 
     getCompatibility,
     getSaturnPosition,
-    getVenusPosition
+    getVenusPosition,
+    geocodeLocation,
+    searchLocations,
+    debounce
   } from './lib/utils.js';
+  import { 
+    calculateAstronomicalPositions, 
+    getZodiacSignFromPosition, 
+    getMoonSignInterpretation, 
+    getRisingSignInterpretation,
+    getVenusSignInterpretation 
+  } from './lib/astro.js';
 
   let birthday = new Date().toISOString().split('T')[0];
+  let birthTime = '12:00';
+  let birthLocation = '';
+  let latitude = null;
+  let longitude = null;
+  let locationSuggestions = [];
+  let showDropdown = false;
+  let isSearchingLocation = false;
+  let selectedLocationIndex = -1;
   let result = null;
   let error = '';
   let data = {};
@@ -21,6 +39,7 @@
   let theme = 'dark'; // default theme
   let showCompatibility = false;
   let showPlanetaryInfo = false;
+  let showMoonRising = false;
   let resultElement;
 
   onMount(() => {
@@ -54,41 +73,174 @@
     showPlanetaryInfo = !showPlanetaryInfo;
   }
 
-  function generateProfile() {
+  // Debounced search function
+  const debouncedSearch = debounce(async (query) => {
+    if (!query || query.length < 3) {
+      locationSuggestions = [];
+      showDropdown = false;
+      return;
+    }
+
+    isSearchingLocation = true;
+    try {
+      const suggestions = await searchLocations(query);
+      locationSuggestions = suggestions;
+      showDropdown = suggestions.length > 0;
+      selectedLocationIndex = -1;
+    } catch (err) {
+      console.error('Search error:', err);
+      locationSuggestions = [];
+      showDropdown = false;
+    } finally {
+      isSearchingLocation = false;
+    }
+  }, 300);
+
+  function handleLocationInput() {
+    debouncedSearch(birthLocation);
+    // Clear coordinates when typing
+    latitude = null;
+    longitude = null;
+  }
+
+  function selectLocation(location) {
+    birthLocation = location.shortName;
+    latitude = location.latitude;
+    longitude = location.longitude;
+    locationSuggestions = [];
+    showDropdown = false;
+    selectedLocationIndex = -1;
+    error = ''; // Clear any previous errors
+  }
+
+  function handleLocationKeydown(event) {
+    if (!showDropdown || locationSuggestions.length === 0) return;
+
+    switch (event.key) {
+      case 'ArrowDown':
+        event.preventDefault();
+        selectedLocationIndex = Math.min(selectedLocationIndex + 1, locationSuggestions.length - 1);
+        break;
+      case 'ArrowUp':
+        event.preventDefault();
+        selectedLocationIndex = Math.max(selectedLocationIndex - 1, -1);
+        break;
+      case 'Enter':
+        event.preventDefault();
+        if (selectedLocationIndex >= 0) {
+          selectLocation(locationSuggestions[selectedLocationIndex]);
+        }
+        break;
+      case 'Escape':
+        event.preventDefault();
+        showDropdown = false;
+        selectedLocationIndex = -1;
+        break;
+    }
+  }
+
+  function handleLocationBlur() {
+    // Delay hiding dropdown to allow for clicks
+    setTimeout(() => {
+      showDropdown = false;
+      selectedLocationIndex = -1;
+    }, 150);
+  }
+
+  async function generateProfile() {
     generatingResult = true;
     error = '';
     
-    setTimeout(() => {
-      try {
-        const date = new Date(birthday);
-        const western = getWesternZodiac(date, data.westernZodiac);
-        const chineseData = getChineseZodiac(date, data.chineseZodiac);
-        const saturnData = getSaturnPosition(date, data.planetaryPositions);
-        const venusData = getVenusPosition(date, data.planetaryPositions);
+    try {
+      // Fix date parsing to avoid timezone issues
+      // Parse the date string manually to avoid UTC conversion issues
+      const [year, month, day] = birthday.split('-').map(Number);
+      const date = new Date(year, month - 1, day); // month is 0-based in Date constructor
+      
+      const western = getWesternZodiac(date, data.westernZodiac);
+      const chineseData = getChineseZodiac(date, data.chineseZodiac);
 
-        if (chineseData.animal === "Unknown") {
-          error = "We couldn't determine your Chinese zodiac sign. Try another year.";
-          generatingResult = false;
-          return;
-        }
-
-        result = {
-          western,
-          chinese: chineseData.animal,
-          chineseElement: chineseData.element,
-          compatibility: getCompatibility(western, chineseData.animal),
-          saturn: saturnData,
-          venus: venusData,
-          ...getZodiacVibe(western, chineseData.animal, data.zodiacVibes)
-        };
-        showCompatibility = false;
-        showPlanetaryInfo = false;
+      if (chineseData.animal === "Unknown") {
+        error = "We couldn't determine your Chinese zodiac sign. Try another year.";
         generatingResult = false;
-      } catch (err) {
-        error = "Something went wrong. Please try again.";
-        generatingResult = false;
+        return;
       }
-    }, 800); // Slight delay for better UX
+
+      // Base result with traditional calculations
+      let newResult = {
+        western,
+        chinese: chineseData.animal,
+        chineseElement: chineseData.element,
+        compatibility: getCompatibility(western, chineseData.animal),
+        saturn: getSaturnPosition(date, data.planetaryPositions),
+        venus: getVenusPosition(date, data.planetaryPositions),
+        ...getZodiacVibe(western, chineseData.animal, data.zodiacVibes)
+      };
+
+      // Enhanced mode: use astronomical calculations
+      if (birthTime && latitude && longitude) {
+        try {
+          const astroResults = await calculateAstronomicalPositions(
+            date, 
+            birthTime, 
+            latitude, 
+            longitude
+          );
+          
+          if (astroResults.success) {
+            // Structure the astronomical results to match expected format
+            const moonSign = astroResults.moon.Sign.label;
+            const risingSign = astroResults.ascendant.Sign.label;
+            const venusSign = astroResults.venus.Sign.label;
+            
+            // Update sun sign with astronomical precision
+            newResult.western = astroResults.sun.Sign.label;
+            
+            // Add moon sign data
+            newResult.moon = {
+              sign: moonSign,
+              ...getMoonSignInterpretation(moonSign)
+            };
+            
+            // Add rising sign data  
+            newResult.rising = {
+              sign: risingSign,
+              ...getRisingSignInterpretation(risingSign)
+            };
+            
+            // Replace simplified Venus with astronomical Venus
+            newResult.venus = {
+              sign: venusSign,
+              ...getVenusSignInterpretation(venusSign)
+            };
+            
+            // Add precision indicators
+            newResult.isPrecise = true;
+            newResult.precision = 'astronomical';
+            newResult.coordinates = astroResults.coordinates;
+            newResult.timezone = astroResults.timezone;
+            newResult.utcOffset = astroResults.utcOffset;
+          } else {
+            throw new Error(astroResults.error || 'Astronomical calculation failed');
+          }
+        } catch (astroError) {
+          console.error('Astronomical calculation error:', astroError);
+          // Fallback to basic mode - no moon/rising signs
+          newResult.precision = 'basic';
+          newResult.error = 'Using basic calculation due to astronomical error: ' + astroError.message;
+        }
+      }
+
+      result = newResult;
+      showCompatibility = false;
+      showPlanetaryInfo = false;
+      showMoonRising = false;
+      generatingResult = false;
+    } catch (err) {
+      console.error('Profile generation error:', err);
+      error = "Something went wrong. Please try again.";
+      generatingResult = false;
+    }
   }
 </script>
 
@@ -124,12 +276,64 @@
     </div>
   {:else}
     <div id="birthday-form">
-      <input type="date" bind:value={birthday} max={new Date().toISOString().split('T')[0]} />
-      <button id="generateBtn" on:click={generateProfile} disabled={generatingResult}>
+      <div class="form-group">
+        <label for="birth-date">Birth Date</label>
+        <input id="birth-date" type="date" bind:value={birthday} max={new Date().toISOString().split('T')[0]} />
+      </div>
+      
+      <div class="form-group">
+        <label for="birth-time">Birth Time</label>
+        <input id="birth-time" type="time" bind:value={birthTime} />
+      </div>
+      
+      <div class="form-group location-group">
+        <label for="birth-location">Birth Location</label>
+        <div class="location-input-container">
+          <input 
+            id="birth-location" 
+            type="text" 
+            bind:value={birthLocation} 
+            placeholder="Start typing a city name..." 
+            on:input={handleLocationInput}
+            on:keydown={handleLocationKeydown}
+            on:blur={handleLocationBlur}
+            on:focus={() => {if (locationSuggestions.length > 0) showDropdown = true}}
+            autocomplete="off"
+          />
+          {#if isSearchingLocation}
+            <div class="search-indicator">
+              <div class="search-spinner"></div>
+            </div>
+          {/if}
+          
+          {#if showDropdown && locationSuggestions.length > 0}
+            <div class="location-dropdown">
+              {#each locationSuggestions as suggestion, index}
+                <div 
+                  class="location-option {index === selectedLocationIndex ? 'selected' : ''}"
+                  on:click={() => selectLocation(suggestion)}
+                  on:mouseenter={() => selectedLocationIndex = index}
+                >
+                  <div class="location-name">{suggestion.shortName}</div>
+                  <div class="location-full">{suggestion.displayName}</div>
+                </div>
+              {/each}
+            </div>
+          {/if}
+        </div>
+      </div>
+      
+      <div class="coordinates-display">
+        {#if latitude !== null && longitude !== null}
+          <small>Coordinates: {latitude.toFixed(4)}°, {longitude.toFixed(4)}°</small>
+        {/if}
+      </div>
+      
+      <button id="generateBtn" on:click={generateProfile} disabled={generatingResult || !birthLocation}>
         {#if generatingResult}
           <span class="spinner-small"></span> Reading the stars...
         {:else}
-          Generate
+          Generate Chart
         {/if}
       </button>
     </div>
@@ -140,72 +344,180 @@
 
     {#if result}
       <div class="result" bind:this={resultElement}>
-        <p>Your Sun Sign: <strong>{result.western}</strong></p>
-        <p>Your Chinese Zodiac: <strong>{result.chinese}</strong> ({result.chineseElement} Element)</p>
-        <div class="vibe-section">
-          <h2>Your Vibe: {result.vibe}</h2>
+        <!-- Header Section -->
+        <div class="result-header">
+          <h2>Astrological Chart Reading</h2>
+          <div class="subtitle">
+            {new Date(birthday).toLocaleDateString('en-US', { 
+              weekday: 'long', 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })} at {birthTime}
+            {#if birthLocation}
+              • {birthLocation}
+            {/if}
+            {#if result.isPrecise}
+              • Astronomical Precision
+            {/if}
+          </div>
+        </div>
+
+        <!-- Main Chart Data Table -->
+        <table class="chart-table">
+          <thead>
+            <tr>
+              <th>Planet/Point</th>
+              <th>Sign</th>
+              <th>Degree</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="planet">☉ Sun</td>
+              <td class="sign">{result.western}</td>
+              <td class="degree">
+                {#if result.isPrecise && result.coordinates}
+                  {Math.floor(((result.sun?.longitude || 0) % 30))}°
+                {:else}
+                  —
+                {/if}
+              </td>
+            </tr>
+            {#if result.moon}
+              <tr>
+                <td class="planet">☽ Moon</td>
+                <td class="sign">{result.moon.sign}</td>
+                <td class="degree">
+                  {#if result.isPrecise}
+                    {Math.floor(((result.moon.longitude || 0) % 30))}°
+                  {:else}
+                    —
+                  {/if}
+                </td>
+              </tr>
+            {/if}
+            {#if result.rising}
+              <tr>
+                <td class="planet">↗ Ascendant</td>
+                <td class="sign">{result.rising.sign}</td>
+                <td class="degree">
+                  {#if result.isPrecise}
+                    {Math.floor(((result.rising.longitude || 0) % 30))}°
+                  {:else}
+                    —
+                  {/if}
+                </td>
+              </tr>
+            {/if}
+            {#if result.venus}
+              <tr>
+                <td class="planet">♀ Venus</td>
+                <td class="sign">{result.venus.sign || result.venus.Sign?.label}</td>
+                <td class="degree">
+                  {#if result.isPrecise && result.venus.longitude}
+                    {Math.floor(((result.venus.longitude || 0) % 30))}°
+                  {:else}
+                    —
+                  {/if}
+                </td>
+              </tr>
+            {/if}
+            <tr>
+              <td class="planet">♄ Saturn</td>
+              <td class="sign">{result.saturn.sign}</td>
+              <td class="degree">—</td>
+            </tr>
+            <tr>
+              <td class="planet">Chinese</td>
+              <td class="sign">{result.chinese}</td>
+              <td class="degree">{result.chineseElement}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Sun Sign Interpretation -->
+        <h3 class="section-header">Solar Analysis</h3>
+        <div class="interpretation-section">
+          <h4>Sun in {result.western}</h4>
           <p>{result.description}</p>
+          <p><strong>Core Essence:</strong> {result.vibe}</p>
         </div>
 
-        <div class="section-buttons">
-          <button class="toggle-btn" on:click={togglePlanetaryInfo}>
-            {showPlanetaryInfo ? 'Hide' : 'Show'} Planetary Placements
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="{showPlanetaryInfo ? '18 15 12 9 6 15' : '6 9 12 15 18 9'}"></polyline>
-            </svg>
-          </button>
-          
-          <button class="toggle-btn" on:click={toggleCompatibility}>
-            {showCompatibility ? 'Hide' : 'Show'} Compatibility
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="{showCompatibility ? '18 15 12 9 6 15' : '6 9 12 15 18 9'}"></polyline>
-            </svg>
-          </button>
-        </div>
-
-        {#if showPlanetaryInfo}
-          <div class="planetary-section">
-            <h3>Planetary Placements</h3>
-            
-            <div class="planet-groups">
-              <div class="planet-group saturn">
-                <h4>Saturn in {result.saturn.sign}</h4>
-                <p>{result.saturn.interpretation}</p>
-              </div>
-              
-              <div class="planet-group venus">
-                <h4>Venus in {result.venus.sign}</h4>
-                <p>{result.venus.interpretation}</p>
-              </div>
+        <!-- Moon Sign Interpretation -->
+        {#if result.moon}
+          <h3 class="section-header">Lunar Analysis</h3>
+          <div class="interpretation-section">
+            <h4>{result.moon.title}</h4>
+            <p>{result.moon.description}</p>
+            <div class="traits">
+              {#each result.moon.traits as trait}
+                <span class="trait">{trait}</span>
+              {/each}
             </div>
           </div>
         {/if}
-        
-        {#if showCompatibility}
-          <div class="compatibility-section">
-            <h3>{result.chinese} compatibility</h3>
-            
-            <div class="compatibility-groups">
-              <div class="compat-group best">
-                <h4>Best Friends</h4>
-                <div class="compat-signs">
-                  {#each result.compatibility['Best Friends'] as sign}
-                    <span class="compat-sign">{sign}</span>
-                  {/each}
-                </div>
-              </div>
-              
-              <div class="compat-group challenge">
-                <h4>Enemy</h4>
-                <div class="compat-signs">
-                  {#each result.compatibility['Enemy'] as sign}
-                    <span class="compat-sign">{sign}</span>
-                  {/each}
-                </div>
-              </div>
+
+        <!-- Rising Sign Interpretation -->
+        {#if result.rising}
+          <h3 class="section-header">Ascendant Analysis</h3>
+          <div class="interpretation-section">
+            <h4>{result.rising.title}</h4>
+            <p>{result.rising.description}</p>
+            <div class="traits">
+              {#each result.rising.traits as trait}
+                <span class="trait">{trait}</span>
+              {/each}
             </div>
           </div>
         {/if}
+
+        <!-- Venus Interpretation -->
+        {#if result.venus && (result.venus.title || result.venus.description)}
+          <h3 class="section-header">Venus Analysis</h3>
+          <div class="interpretation-section">
+            <h4>{result.venus.title || `Venus in ${result.venus.sign || result.venus.Sign?.label}`}</h4>
+            <p>{result.venus.description || result.venus.interpretation}</p>
+            {#if result.venus.traits}
+              <div class="traits">
+                {#each result.venus.traits as trait}
+                  <span class="trait">{trait}</span>
+                {/each}
+              </div>
+            {/if}
+          </div>
+        {/if}
+
+        <!-- Saturn Interpretation -->
+        <h3 class="section-header">Saturn Analysis</h3>
+        <div class="interpretation-section">
+          <h4>Saturn in {result.saturn.sign}</h4>
+          <p>{result.saturn.interpretation}</p>
+        </div>
+
+        <!-- Compatibility Analysis -->
+        <h3 class="section-header">Compatibility Matrix</h3>
+        <div class="interpretation-section">
+          <h4>Chinese Zodiac Compatibility</h4>
+          <table class="compatibility-table">
+            <thead>
+              <tr>
+                <th>Relationship Type</th>
+                <th>Compatible Signs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="positive">
+                <td>Best Friends</td>
+                <td>{result.compatibility['Best Friends'].join(', ')}</td>
+              </tr>
+              <tr class="negative">
+                <td>Challenging</td>
+                <td>{result.compatibility['Enemy'].join(', ')}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     {/if}
   {/if}
