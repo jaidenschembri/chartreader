@@ -19,7 +19,8 @@
     getZodiacSignFromPosition, 
     getMoonSignInterpretation, 
     getRisingSignInterpretation,
-    getVenusSignInterpretation 
+    getVenusSignInterpretation,
+    formatDegrees
   } from './lib/astro.js';
 
   let birthday = new Date().toISOString().split('T')[0];
@@ -196,21 +197,30 @@
             // Update sun sign with astronomical precision
             newResult.western = astroResults.sun.Sign.label;
             
+            // Add sun longitude data
+            newResult.sun = {
+              sign: astroResults.sun.Sign.label,
+              longitude: astroResults.sun.longitude
+            };
+            
             // Add moon sign data
             newResult.moon = {
               sign: moonSign,
+              longitude: astroResults.moon.longitude,
               ...getMoonSignInterpretation(moonSign)
             };
             
             // Add rising sign data  
             newResult.rising = {
               sign: risingSign,
+              longitude: astroResults.ascendant.longitude,
               ...getRisingSignInterpretation(risingSign)
             };
             
             // Replace simplified Venus with astronomical Venus
             newResult.venus = {
               sign: venusSign,
+              longitude: astroResults.venus.longitude,
               ...getVenusSignInterpretation(venusSign)
             };
             
@@ -377,8 +387,8 @@
               <td class="planet">☉ Sun</td>
               <td class="sign">{result.western}</td>
               <td class="degree">
-                {#if result.isPrecise && result.coordinates}
-                  {Math.floor(((result.sun?.longitude || 0) % 30))}°
+                {#if result.isPrecise && result.sun?.longitude}
+                  {formatDegrees(result.sun.longitude % 30)}
                 {:else}
                   —
                 {/if}
@@ -389,8 +399,8 @@
                 <td class="planet">☽ Moon</td>
                 <td class="sign">{result.moon.sign}</td>
                 <td class="degree">
-                  {#if result.isPrecise}
-                    {Math.floor(((result.moon.longitude || 0) % 30))}°
+                  {#if result.isPrecise && result.moon.longitude}
+                    {formatDegrees(result.moon.longitude % 30)}
                   {:else}
                     —
                   {/if}
@@ -402,8 +412,8 @@
                 <td class="planet">↗ Ascendant</td>
                 <td class="sign">{result.rising.sign}</td>
                 <td class="degree">
-                  {#if result.isPrecise}
-                    {Math.floor(((result.rising.longitude || 0) % 30))}°
+                  {#if result.isPrecise && result.rising.longitude}
+                    {formatDegrees(result.rising.longitude % 30)}
                   {:else}
                     —
                   {/if}
@@ -416,7 +426,7 @@
                 <td class="sign">{result.venus.sign || result.venus.Sign?.label}</td>
                 <td class="degree">
                   {#if result.isPrecise && result.venus.longitude}
-                    {Math.floor(((result.venus.longitude || 0) % 30))}°
+                    {formatDegrees(result.venus.longitude % 30)}
                   {:else}
                     —
                   {/if}

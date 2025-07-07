@@ -6,6 +6,7 @@ import coord from 'astronomia/coord';
 import base from 'astronomia/base';
 import rise from 'astronomia/rise';
 import globe from 'astronomia/globe';
+import nutation from 'astronomia/nutation';
 import { getTimezoneInfo, convertToUTC } from './utils.js';
 
 /**
@@ -168,12 +169,21 @@ function calculateAscendant(jd, latitude, longitude) {
       lstNormalizedDeg: lstNormalized * 180 / Math.PI
     });
     
-    // Calculate obliquity of the ecliptic
-    const ε = base.obliquity(jd);
+    // Calculate obliquity of the ecliptic using the correct method
+    // Use nutation module to get proper obliquity
+    const T = base.J2000Century(jd);
+    const nutationData = nutation.nutation(T);
+    const ε0 = nutation.meanObliquity(T);
+    // nutationData returns [Δψ, Δε] where Δψ is nutation in longitude, Δε is nutation in obliquity
+    const ε = ε0 + nutationData[1];
     
-    console.log('Obliquity:', { 
-      obliquityRad: ε, 
-      obliquityDeg: ε * 180 / Math.PI 
+    console.log('Obliquity calculations:', { 
+      T,
+      meanObliquityRad: ε0,
+      meanObliquityDeg: ε0 * 180 / Math.PI,
+      nutationInObliquity: nutationData[1] * 180 / Math.PI,
+      trueObliquityRad: ε,
+      trueObliquityDeg: ε * 180 / Math.PI
     });
     
     // Convert latitude to radians
